@@ -1,3 +1,7 @@
+import themes from './themes';
+import { characterGenerator } from './generators';
+import { classes } from './Character';
+
 export default class GameController {
   constructor(gamePlay, stateService) {
     this.gamePlay = gamePlay;
@@ -6,6 +10,7 @@ export default class GameController {
 
   init() {
     // TODO: add event listeners to gamePlay events
+    this.gamePlay.drawUi(themes.prairie);
     // TODO: load saved stated from stateService
   }
 
@@ -20,4 +25,8 @@ export default class GameController {
   onCellLeave(index) {
     // TODO: react to mouse leave
   }
+
+  // teamGeneration() {
+
+  // }
 }
